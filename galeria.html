@@ -2,129 +2,55 @@
 <html lang="ca">
 <head>
     <meta charset="UTF-8">
-    <title>Guia d’estil · Web Verda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pàgina 2 — Animacions</title>
     <link rel="stylesheet" href="estils.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-    <style>
+     <style>
+        
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: #f8f3df;
+            background: linear-gradient(100deg, 
+                #dccf70,  /* verde medio */
+                #e97f2f,  /* verde azulado */
+                #af71dc,  /* verde claro */
+                #68b7ec   /* verde oscuro */
+            );
             display: flex;
             flex-direction: column;
             align-items: center;
             padding-top: 0px;
-            padding-bottom: 100px;
         }
     </style>
-</head>
 
+</head>
 <body>
 
     <nav>
-        <div class="logo">Exercici 005</div>
-        <div>
-            <a href="index.html">Home</a>
-            <a href="galeria.html">Galeria</a>
-            <a class="active" href="guia-estil.html">Guia d’estil</a>
-        </div>
-    </nav>
+    <div class="logo">Exercici 005</div>
+    <div>
+      <a  href="index.html">Home</a>
+      <a href="galeria.html" class="active">Galeria</a>
+      <a href="guia-estil.html">Guia d’estil</a>
+    </div>
+  </nav>
 
-    <section class="reveal">
-        <h1>Guia d’estil</h1>
-        <p>Exemple de tipografies, icones, colors i botons amb transicions suaus. Aquí veurem com combinar Accessibilitat i estil visual.</p>
+    <!-- Loader -->
+    <div class="loader"></div>
+
+    <!-- Animació principal -->
+    <section class="main-animation">
+        <div class="animated-block">Bounce & Spin!</div>
     </section>
 
-
-   <!-- Tipografies -->
-    <section class="reveal mostra-fonts">
-        <h2>Mostrari de Tipografies</h2>
-
-
-        <!-- Escala Tipogràfica -->
-        <div class="fonts-exemple">
-            <div>
-                <h1>H1 — Poppins 800</h1>
-                <p class="details">font-size: 2.5rem · line-height: 1 · letter-spacing: 3.5px</p>
-            </div>
-            <div>
-                <h2>H2 — Poppins 600</h2>
-                <p class="details">font-size: 2rem · line-height: 1.5 · letter-spacing: -0.2px</p>
-            </div>
-            <div>
-                <h3>H3 — Poppins 400</h3>
-                <p class="details">font-size: 1.5rem · line-height: 2.5 · letter-spacing: -2.5px</p>
-            </div>
-            <div>
-                <p class="p-normal">Paràgraf base amb Poppins 300. Line-height 1.6 i mida 1rem.</p>
-                <p class="details">font-size: 1rem · line-height: 1.6 · letter-spacing: 0.2px</p>
-            </div>
-        </div>
-
-
-        <!-- Baseline i icones -->
-        <h3>Alineació a Baseline</h3>
-        <div class="icons-exemple">
-            <span class="material-icons-outlined baseline-icon">favorite</span>
-            <span class="material-icons-outlined baseline-icon">home</span>
-            <span class="material-icons-outlined baseline-icon">search</span>
-            <p class="baseline-text">Text alineat amb icones (mateix baseline).</p>
-        </div>
-
-        <!-- Accessibilitat -->
-        <h3>Exemples d’Accessibilitat</h3>
-        <div class="accessibilitat">
-            <p class="contrast-ok">Contrast correcte (mínim AA).</p>
-            <p class="text-minim">Mida mínima llegible: 0.875rem (14px).</p>
-        </div>
+    <!-- Scroll-reveal -->
+    <section class="scroll-reveal-container">
+        <div class="reveal-block">Bloc 1</div>
+        <div class="reveal-block">Bloc 2</div>
+        <div class="reveal-block">Bloc 3</div>
+        <div class="reveal-block">Bloc 4</div>
     </section>
 
+</body>
+</html>
 
-    <!-- Material Icons -->
-    <section class="reveal">
-        <h2>Material Icones</h2>
-        <div class="icons-exemple">
-            <span class="material-icons-outlined" style="font-size:48px;">home</span>
-            <span class="material-icons-outlined" style="font-size:36px;">favorite</span>
-            <span class="material-icons-outlined" style="font-size:24px;">settings</span>
-            <span class="material-icons-outlined" style="font-size:60px;">account_circle</span>
-        </div>
-        <p>Opcions de pes i mida: wght, FILL, opsz.</p>
-    </section>
-
-
-    <!-- Botons -->
-    <section class="reveal">
-        <h2>Botons amb icona</h2>
-        <button><span class="material-icons-outlined">send</span> Enviar</button>
-        <button><span class="material-icons-outlined">download</span> Descarregar</button>
-        <button><span class="material-icons-outlined">favorite</span> M'agrada</button>
-    </section>
-
-
-    <!-- Colors -->
-    <section class="reveal">
-        <h2>Colors</h2>
-        <div class="colors-exemple">
-            <div class="color-box" style="background:#986bd3;">
-                <p>#986bd3</p>
-                <p>RGB(152,107,211)</p>
-                <p>HSL(262,50%,62%)</p>
-                <p>Alpha: rgba(152,107,211,0.5)</p>
-            </div>
-            <div class="color-box" style="background:#eb7d4a;">
-                <p>#eb7d4a</p>
-                <p>RGB(235,125,74)</p>
-                <p>HSL(17,77%,61%)</p>
-                <p>Alpha: rgba(235,125,74,0.5)</p>
-            </div>
-            <div class="color-box" style="background:#A8E3D4;">
-                <p>#A8E3D4</p>
-                <p>RGB(168,227,212)</p>
-                <p>HSL(167,55%,77%)</p>
-                <p>Alpha: rgba(168,227,212,0.5)</p>
-            </div>
-        </div>
-    </section>
-    </body>
-    </html>
