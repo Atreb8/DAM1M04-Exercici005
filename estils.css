@@ -218,6 +218,24 @@ nav .active {
 }
 
 
+/* Imagen alternativa oculta */
+.card img.back {
+  opacity: 0;
+}
+
+/* Al hacer hover, intercambiamos opacidades */
+.card:hover img.front {
+  opacity: 0;
+}
+
+.card:hover img.back {
+  opacity: 1;
+}
+
+
+
+
+
 /* ------------------------------
    MENÚ SECUNDARI 
 --------------------------------*/
