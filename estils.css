@@ -594,10 +594,37 @@ button:hover {
 /* ------------------------------
    RESPONSIVE
 --------------------------------*/
+/* ------------------------------
+   NAV MÓVIL
+--------------------------------*/
 @media (max-width: 768px) {
-  nav { padding: 10px 20px; }
 
-  .hero h1 { font-size: 2.4rem; }
-  .targetes { padding: 40px 20px; }
-  .card { width: 90%; height: 320px; }
+  /* Ocultar logo en móvil */
+  nav .logo {
+    display: none;
+  }
+
+  /* La barra ahora solo son los 3 enlaces centrados */
+  nav div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  /* Reparto equitativo */
+    align-items: center;
+  }
+
+  nav a {
+    flex: 1;                 /* cada enlace ocupa el mismo espacio */
+    text-align: center;      /* texto centrado */
+    margin: 0;               /* elimina márgenes laterales */
+    padding: 10px 0;
+  }
+
+.icons-exemple {
+    display: flex;
+    flex-direction: row;      /* asegura horizontal */
+    align-items: center;    /* baseline real */
+    gap: 12px;
+  }
 }
+
+
