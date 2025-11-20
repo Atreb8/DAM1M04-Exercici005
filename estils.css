@@ -216,3 +216,75 @@ nav .active {
 .card.ease {
     transition-timing-function: ease;
 }
+
+
+/* ------------------------------
+   MENÚ SECUNDARI 
+--------------------------------*/
+.menu-secundari {
+    display: flex;
+    justify-content: center;
+    gap: 170px;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.menu-secundari a {
+    position: relative;
+    text-decoration: none;
+    color: var(--verd-3);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s, transform 0.3s;
+    }
+
+/* Subrayado animado */
+.menu-secundari a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: var(--verd-2);
+    transition: width 0.4s ease;
+}
+
+/* Hover: color, subrayado y ligero desplazamiento */
+.menu-secundari a:hover {
+  color: var(--verd-2);
+  transform: translateY(-2px);
+}
+
+.menu-secundari a:hover::after {
+  width: 100%;
+}
+
+
+
+/* ------------------------------
+ BOTÓ FLOTANT
+--------------------------------*/
+.fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--verd-3);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 32px;
+  cursor:pointer;
+  box-shadow:0 6px 14px rgba(0,0,0,0.2);
+  transition: transform .3s, box-shadow .3s, background .3s;
+}
+
+.fab:hover {
+  transform: scale(1.15) rotate(10deg);
+  background: var(--verd-2);
+  box-shadow:0 10px 24px rgba(0,0,0,.28);
+}
