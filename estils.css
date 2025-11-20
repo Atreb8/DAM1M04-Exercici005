@@ -69,3 +69,150 @@ nav .active {
   color: var(--verd-2);
 
 }
+
+/* ------------------------------
+   HERO (degradat animat)
+--------------------------------*/
+.hero {
+    height: 70vh;
+    background: linear-gradient(100deg, 
+      #dccf70,  /* verde medio */
+      #e97f2f,  /* verde azulado */
+      #af71dc,  /* verde claro */
+      #68b7ec   /* verde oscuro */
+  );
+
+    background-size: 300% 300%;
+    animation: bgShift 6s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+@keyframes bgShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero h1 {
+    font-family: "Poppins";
+    font-weight: 800;
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 600px;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 14px 30px;
+    background: white;
+    color: #333;
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: transform .3s, background .3s, letter-spacing .3s;
+}
+
+.hero button:hover {
+    transform: translateY(-4px) scale(1.05);
+    background: transparent;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+
+/* ------------------------------
+   TARGETES 
+--------------------------------*/
+.targetes {
+    padding: 100px 70px 120px 70px;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+    perspective: 1000px; 
+}
+
+/* Tarjeta base */
+.card {
+    position: relative;
+    width: 200px;      
+    height: 280px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 15px 15px 20px rgba(0,0,0,0.50);
+    cursor: pointer;
+
+    /* transición para transform + box-shadow + z-index */
+    transition: transform 1.5s ease-in-out, box-shadow 1.5s ease-in-out;
+    z-index: 1;
+}
+
+/* Imagen dentro de la tarjeta */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* transición para filtros si quieres oscurecer */
+    transition: filter 2s ease-in-out;
+}
+
+/* Aparece letras cuando hover */
+.card::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 1.4rem;
+    font-family: "Poppins";
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /*aparece texto con opacidad progresiva*/
+}
+
+/* Hover: levanta tarjeta, zoom fuerte y sombra marcada */
+.card:hover {
+    transform: translateY(-10px) scale(1.5); /* moverse un poco para arriba, zoom */
+    box-shadow: 0 24px 48px rgba(0,0,0,0.38);
+}
+
+
+/* Hover efecto zoom */
+.card:hover::after {
+    opacity: 1;
+    transform: translateY(10);
+}
+
+/* Diferentes transicions segons tipo */
+.card.linear {
+    transition-timing-function: linear;
+}
+
+.card.easein {
+    transition-timing-function: ease-in;
+}
+
+.card.easeout {
+    transition-timing-function: ease-out;
+}
+
+.card.ease {
+    transition-timing-function: ease;
+}
